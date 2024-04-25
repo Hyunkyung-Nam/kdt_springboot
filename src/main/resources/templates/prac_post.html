@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="prac-post" method="post">
+        <fieldset>
+            <legend></legend>
+            <label for="name">이름</label>
+            <input type="text" name="name" id="name">
+            <br />
+
+            <label >성별</label>
+            <input type="radio" name="gender" id="male" value="male">
+            <label for="male">남자 </label>
+            <input type="radio" name="gender" id="female" value="female">
+            <label for="female">여자 </label>
+            <br />
+
+            <label for="birth">생년월일</label>
+            <input type="date" name="birth" id="birth">
+            <br />
+
+            <label>관심사</label>
+            <input type="checkbox" name="interested" value="travel" id="travel">
+            <label for="travel">여행 </label>
+            <input type="checkbox" name="interested" value="fassion"  id="fassion">
+            <label for="fassion">패션 </label>
+            <input type="checkbox" name="interested" value="food"   id="food">
+            <label for="food">음식 </label>
+            <br />
+        </fieldset>
+        <button type="submit">회원가입</button>
+    </form>
+</body>
+</html>

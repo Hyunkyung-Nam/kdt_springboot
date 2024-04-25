@@ -4,12 +4,16 @@ import com.kdt11.hyunkyung.model.Person;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Controller
 public class PracticeController {
+
+
     @GetMapping("/prac1")
     public String checkAge(Model model){
         int age = 20;
@@ -30,5 +34,26 @@ public class PracticeController {
         model.addAttribute("people", people);
 
         return "prac0425_people";
+
+    }
+    //실습4 포스트 전송받기
+    @GetMapping("/form")
+    public String form(){
+        return "form";
+
+    }
+    @PostMapping("/result")
+    public String result(
+            @RequestParam String name,
+            @RequestParam String gender,
+            @RequestParam String birthDate,
+            @RequestParam List<String> interest,
+            Model model
+    ){
+        model.addAttribute("name", name);
+        model.addAttribute("gender", gender);
+        model.addAttribute("birthDate", birthDate);
+        model.addAttribute("interests", String.join(", ",interest));
+        return "result";
     }
 }
