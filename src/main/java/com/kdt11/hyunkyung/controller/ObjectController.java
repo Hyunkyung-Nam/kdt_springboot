@@ -13,22 +13,22 @@ public class ObjectController {
     public String dtoForm(){
         return "dtoform";
     }
-    @GetMapping("/user1")
-    public String user1(Model model ){
-        //Dto를 사용안한다고 가정
-
-//        UserDto noDto = new UserDto("홍길동", "abc@ab.com", 20);
-//        model.addAttribute("name", noDto.getName());
-//        model.addAttribute("email", noDto.getEmail());
-//        model.addAttribute("age", noDto.getAge());
-
-
-        //Dto를 사용한다고 가정
-        UserDto user = new UserDto("성춘향", "xyz@ab.com", 20);
-        model.addAttribute("user", user);
-
-        return "user" ;
-    }
+//    @GetMapping("/user1")
+//    public String user1(Model model ){
+//        //Dto를 사용안한다고 가정
+//
+////        UserDto noDto = new UserDto("홍길동", "abc@ab.com", 20);
+////        model.addAttribute("name", noDto.getName());
+////        model.addAttribute("email", noDto.getEmail());
+////        model.addAttribute("age", noDto.getAge());
+//
+//
+//        //Dto를 사용한다고 가정
+//        UserDto user = new UserDto("성춘향", "xyz@ab.com", 20);
+//        model.addAttribute("user", user);
+//
+//        return "user" ;
+//    }
 
     @PostMapping("/user1")
     public String postUser(@ModelAttribute UserDto userDto, Model model){

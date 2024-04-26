@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>로그인</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <form id="login-form">
+        아이디 : <input type="text" name="userId" /><br />
+        비밀번호 : <input type="password" name="userPw" /><br />
+        <button type="button" onclick="userLogin();">로그인</button>
+    </form>
+    <script>
+        function userLogin(){
+             const form = document.getElementById('login-form');
+              const data = {
+                userId: form.userId.value,
+                userPw: form.userPw.value,
+            };
+            axios({
+                method : "POST",
+                url: "/login",
+                data
+            }).then((res) => {
+                console.log(res.data);
+                if(res.data === "성공"){
+                    location.href = "/member";
+                }
+            });
+        }
+    </script>
+</body>
+</html>

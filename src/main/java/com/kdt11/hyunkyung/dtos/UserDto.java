@@ -8,11 +8,15 @@ import lombok.Setter;
 public class UserDto {
     private String name;
     private String email;
+    private String password;
     private int age;
 
-    public UserDto(String name, String email, int age) {
-        this.name = name;
-        this.email = email;
-        this.age = age;
-    }
+    //Requestbody로 지정한 DTO에는 기본생성자가 필요할 수도 있다.
+    public UserDto(){}
+
+//    public UserDto(String name, String email, int age) {
+//        this.name = name;
+//        this.email = email;
+//        this.age = age;
+//    }
 }

@@ -6,6 +6,8 @@
 </head>
 <body>
 
+    <div th:text="#{message.title}"></div>
+
     <h3>Thymeleaf 실습1</h3>
     <div th:if="${age < 20}" th:text="${age}+'세는 미성년자 입니다.'"></div>
     <div th:unless="${age < 20}" th:text="${age}+'세는 성인 입니다.'"></div>

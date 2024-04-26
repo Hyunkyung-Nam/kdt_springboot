@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Dto</title>
+</head>
+<body>
+    <h3>DTO 이용해보기</h3>
+    <div>
+        <form action="/dto/response1" method="get">
+            <h4>GET - DTO</h4>
+            이름 : <input type="text" name="name" /><br />
+            나이 : <input type="text" name="age"> <br/>
+            <button type="submit">GET 전송</button>
+        </form>
+        <form action="/dto/response2" method="post">
+            <h4>POST - DTO</h4>
+            이름 : <input type="text" name="name" /><br />
+            나이 : <input type="text" name="age"> <br/>
+            <button type="submit">POST 전송( RequestBody x )</button>
+        </form>
+        <form action="/dto/response3" method="post">
+            <h4>POST - DTO</h4>
+            이름 : <input type="text" name="name" /><br />
+            나이 : <input type="text" name="age"> <br/>
+            <button type="submit">POST 전송( RequsetBody o )</button>
+        </form>
+    </div>
+</body>
+</html>
